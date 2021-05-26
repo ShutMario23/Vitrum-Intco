@@ -1,0 +1,46 @@
+.header-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+}
+
+.header-title h1 {
+    margin: 0;
+}
+
+.header-profile {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-profile button h1 {
+    margin: 0;
+    margin-left: 20px;
+}
+
+.button-content h1 {
+    margin: 0;
+    margin-left: 20px;
+}
+
+.header-profile button {
+    height: 60%;
+}
+
+.header-profile button .button-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+::ng-deep .menu {
+    background: #222 !important;
+  }

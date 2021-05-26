@@ -1,0 +1,41 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { ICliente } from 'src/app/models/ICliente';
+
+
+export interface respuesta {
+  res: string,
+  id: number
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ClienteService {
+
+  private basePath = "https://vitrum-app.herokuapp.com";
+
+  constructor(private httpClient: HttpClient) { }
+
+  obtenerClientesGet() {
+    return this.httpClient.request<ICliente[]>('get', `${this.basePath}/api/cliente/obtenerClientes`);
+  }
+
+  agregarClientePost(cliente: ICliente) {
+    return this.httpClient.request<respuesta>('post', `${this.basePath}/api/cliente/agregarCliente`, {
+      body: cliente
+    });
+  }
+
+  editarClientePut(cliente: ICliente) {
+    return this.httpClient.request('put', `${this.basePath}/api/cliente/editarCliente`, {
+      body: cliente
+    });
+  }
+
+  eliminarClienteDelete(cliente: ICliente) {
+    return this.httpClient.request('delete', `${this.basePath}/api/cliente/eliminarCliente`, {
+      body: cliente
+    });
+  }
+}

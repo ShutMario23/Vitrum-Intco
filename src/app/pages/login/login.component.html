@@ -1,0 +1,26 @@
+<div class="login-page" [class]='backColorMode'>
+<!-- <div class="login-page" [class]='backColorMode' *ngIf="backColorMode === 'light'; then lightmode; else darkmode">  -->
+    <div class="login-card">
+        <div class="card-image"[class]='themeOption' >
+            <img class="logo" src="assets/img/logo.png" alt="">
+        </div>
+        <div class="card-form"[class]='cardColorMode' >
+            <form class="example-form">
+                <div class="title-form">
+                    <h1>Bienvenido</h1>
+                </div>
+                <mat-form-field appearance="outline" class="example-full-width" color="primary">
+                    <mat-label>Usuario</mat-label>
+                    <input [(ngModel)]="user" autocomplete="off" matInput type="text" [formControl]="userCtrl" required>
+                    <mat-error>{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="example-full-width" color="primary">
+                    <mat-label>Contraseña</mat-label>
+                    <input [(ngModel)]="password" autocomplete="off" matInput type="password" [formControl]="passCtrl" required>
+                    <mat-error>{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <button mat-raised-button [class]="buttonColorMode" (click)="onSubmit()" >Ingresar</button>
+            </form>
+        </div>
+    </div>
+</div>

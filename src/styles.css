@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+    --primary-color: #154360;
+    --secondary-color: #2980B9;
+    --third-color: #5FA0CB;
+    --form-color: #f1f1f1;
+}
+
+html, body, app-root { 
+    height: 100%;
+    background-color: var(--form-color);
+}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+router-outlet {
+    display: none;
+}
+
+.mat-dialog-container {
+    padding: 0px !important;
+    border-radius: 0 !important;
+}
+
+.mat-stepper-horizontal {
+    height: 100%;
+    /*background-color: var(--form-color) !important;*/
+}
+
+.mat-form-field-appearance-outline .mat-form-field-prefix,
+.mat-form-field-appearance-outline .mat-form-field-suffix {
+  place-self: center;
+}
+
+.snackBarGreen {
+    background-color: 
+    #1DD581 !important;
+    color: #fff !important;
+    opacity: 0.9;
+}
+
+.snackBarRed {
+    background-color: #E53935 !important;
+    color: #fff !important;
+    text-align: center;
+    opacity: 0.9;
+}
